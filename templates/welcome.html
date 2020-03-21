@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block head %}
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .intro {
+            width: 100%;
+            height: 300px;
+            color: #fff;
+        }
+        .intro2 {
+            width: 800%;
+            height: 250px;
+            background-color: blue;
+        }
+
+        .text1 {
+            padding: 10px;
+        }
+
+        .home-back {
+            width: 100%;
+            height: 400px;
+            background-color: midnightblue;
+            border-radius: 100px 10px 300px 20px;
+        }
+        .card{
+            float: left;
+            margin-left: 12px;
+            margin-right: 12px;
+            display: inline-block;
+        }
+    .products{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        background-color: mintcream;
+    }
+    .offer-text{
+        padding: 12px;
+    }
+    .cards-center{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .con-don{
+        margin-bottom: 50px;
+    }
+    .fun{
+        width: 80px;
+        height: 120px;
+        border-radius: 8px 60px;
+        position: absolute;
+    }
+    .first{
+        background-color: #00ff00;
+        position: absolute;
+         right: 150px;
+        top: 150px;
+
+    }
+    .second{
+        background-color: #ff00ff;
+        position: absolute;
+right: 80px;
+        top: 175px;
+
+    }
+    .third{
+        background-color: #ffff00;
+        position: absolute;
+        right: 100px;
+        top: 200px;
+
+    }
+    .pitch{
+        padding: 50px;
+    }
+    .btn{
+        margin: 5px 5px 15px;
+    }
+    </style>
+{% endblock %}
+{% block background %}
+    <div class="home-back">
+        <div style="display: inline-block">
+            <div class="intro mt-5">
+                <h1 class="text1">Welcome to E-List</h1>
+                <h2 class="text1 typewriter">The only way pros can really get stuff done</h2>
+            </div>
+            <a href="{% url 'register' %}"><button class="btn btn-success">Register Now</button></a>
+        </div>
+    <div class="fun first"></div>
+    <div class="fun second"></div>
+    <div class="fun third"></div>
+    </div>
+    <div class="sign-up container">
+    <h1>Sign up now for FREE!</h1>
+        <p class="pitch"><strong>What's holding you back. There is no better time to get organized than now.
+        Many companies offer a free trial, but this is free for you forever for any reason.</strong></p>
+        <a href="{% url 'register' %}"><button class="btn btn-info">Register</button></a>
+    <button class="btn btn-outline-info">Sign In</button>
+
+    </div>
+    <div class="products container">
+        <h1 class="text offer-text">What we offer</h1>
+        <div class="cards-center">
+        <div class="products-indi">{% load static %}
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'base/images/ideas.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ideas</h5>
+                    <p class="card-text">Keep track of all of you thoughts each day. It couldn't be easier.
+                    Great for meeting notes.</p>
+                    <a href="#" class="btn btn-primary">Try Now</a>
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'base/images/lists.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Lists</h5>
+                    <p class="card-text">Keep track of anything from clients to a grocery store list. Access whenever wherever</p>
+                    <a href="{% url 'list' %}" class="btn btn-primary">Try Now</a>
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'base/images/goals.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'base/images/tasks.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    <div class="open-source container">
+        <h1 class="text1 p-5">Always 100% FREE!</h1>
+    <p class="text1 p-5">E-List is designed with the goal to make businesses, communities or daily life as organized as possible.
+    Although this is provided for free, donations are appreciated, and help ensure this service is available for years to come.
+    For more information contact the developer. </p>
+        <div class="con-don">
+    <a href="#" class="btn btn-outline-info">Contact</a>
+    <a href="#" class="btn btn-outline-danger">Donate</a>
+        </div>
+    </div>
+{% endblock %}
